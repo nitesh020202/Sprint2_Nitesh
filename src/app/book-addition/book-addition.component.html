@@ -1,0 +1,38 @@
+<div align="center">
+    <h2>New Book Addition</h2>
+    <div  [hidden]="submitted" style="width: 400px;">
+      <form (ngSubmit)="insertBook()">
+    
+        <div class="form-group">
+          <label for="bookId">Book Id:</label>
+        <input type="text" class="form-control" id="bookId" [(ngModel)]="book.bookId" name="bookId" value="{{newId}}" readonly />
+      </div>
+    
+        <div class="form-group">
+          <label for="bookName">Book Name:</label>
+          <input type="text" class="form-control" id="bookName" required [(ngModel)]="book.bookName" name="bookName"/>
+        </div>
+    
+        <div class="form-group">
+          <label for="author">Author Name</label>
+          <input type="text" class="form-control" id="author" required [(ngModel)]="book.author" name="author"/>
+        </div>
+    
+        <div class="form-group">
+            <label for="price">Book price</label>
+            <input type="text" class="form-control" id="price" required [(ngModel)]="book.price" name="price"/>
+          </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    
+    <div  [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+      <button (click)="returnBack()" class="btn btn-primary">Return</button><br>
+    </div>
+    <!-- <a routerLink="/BOOK-LIST">Go to Book List</a>
+    <button type="submit" (click)="onSubmit()">Click Here</button>
+    </div> -->
+
+    

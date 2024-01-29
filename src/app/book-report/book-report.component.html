@@ -1,0 +1,21 @@
+<div align="center">
+    <h2>Book Details</h2> 
+    <div *ngIf="book">
+        <div>
+            <label><b>Book Id: </b></label> {{book.bookId}}
+          </div>  
+      <div>
+        <label><b>Book Name: </b></label> {{book.bookName}}
+      </div>
+      <div>
+        <label><b>Author: </b></label> {{book.author}}
+      </div>
+     
+      <div>
+        <label><b>Price: </b></label> {{book.price}}
+      </div>  
+    </div>
+    <br>
+    <br>
+    <button (click)="returnBack()" class="btn btn-primary">Back to Book List</button><br>
+    </div>
